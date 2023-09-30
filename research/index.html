@@ -183,8 +183,8 @@
 <!--       <br>
         <small> <a href="https://EdoardoBriganti.github.io/research/paper_draft_MAR2023_whydoesgdp.pdf" style="color:blue"> [<u>PDF</u>] </a>  <a href="https://EdoardoBriganti.github.io/research/paper_draft_MAR2023_whydoesgdp_appendix.pdf" style="color:blue"> [<u>Online Appendix</u>] </a> </small>  -->
       <br> 
-        <button onclick="toggleAbstract()" style="border: none; background-color: transparent; color: pink; text-decoration: underline; cursor: pointer;"><small><i>Read Abstract</i></small></button>
-        <div id="abstract-content" style="display:none;">
+        <button onclick="toggleAbstract('abstract-content-1')" style="border: none; background-color: transparent; color: pink; text-decoration: underline; cursor: pointer;"><small><i>Read Abstract</i></small></button>
+        <div id="abstract-content-1" style="display:none;">
             <p> <small>            I construct a novel quarterly series of US military prime contract awards spanning from 1947:1 onward.
                                    Defense contracts: (i) account for the anticipatory effects of government spending (G); 
                                    (ii) predominantly involve a small number of publicly traded companies, offering clear insight into the
@@ -213,8 +213,8 @@
           <br>
             <small> <a href="https://EdoardoBriganti.github.io/research/paper_draft_MAR2023_whydoesgdp.pdf" style="color:blue"> [<u>PDF</u>] </a>  <a href="https://EdoardoBriganti.github.io/research/paper_draft_MAR2023_whydoesgdp_appendix.pdf" style="color:blue"> [<u>Online Appendix</u>] </a> </small> 
           <br> 
-            <button onclick="toggleAbstract()" style="border: none; background-color: transparent; color: pink; text-decoration: underline; cursor: pointer;"><small><i>Read Abstract</i></small></button>
-            <div id="abstract-content" style="display:none;">
+            <button onclick="toggleAbstract('abstract-content-2')" style="border: none; background-color: transparent; color: pink; text-decoration: underline; cursor: pointer;"><small><i>Read Abstract</i></small></button>
+            <div id="abstract-content-2" style="display:none;">
                 <p> <small>            We find that the early impact of defense news shocks on GDP is due to a rise in business inventories, 
                                        as contractors ramp up production for new defense contracts. These contracts do not affect government 
                                        spending (G) until payment-on-delivery, which occurs 2-3 quarters later. Novel data on defense procurement
@@ -232,8 +232,8 @@
       <br>
         <small> <a href="https://EdoardoBriganti.github.io/research/paper_draft_DEC2022_networkeffect.pdf" style="color:blue"> [<u>PDF</u>] </a>  </small> 
       <br> 
-        <button onclick="toggleAbstract()" style="border: none; background-color: transparent; color: pink; text-decoration: underline; cursor: pointer;"><small><i>Read Abstract</i></small></button>
-        <div id="abstract-content" style="display:none;">
+        <button onclick="toggleAbstract('abstract-content-3')" style="border: none; background-color: transparent; color: pink; text-decoration: underline; cursor: pointer;"><small><i>Read Abstract</i></small></button>
+        <div id="abstract-content-3" style="display:none;">
             <p> <small>           We study the effects of fiscal consolidations in the United States and their propagation in the production network. 
                                   We use a narrative approach to identify fiscal adjustments which are exogenous to output fluctuations. Then we apply spatial
                                   econometric techniques to separate the total effect of fiscal adjustments into a direct and network component. We find that 
@@ -302,14 +302,14 @@ example:
 
 <!-- The toggleAbstract function is defined in a <script> tag. This function toggles the hidden class on the #abstract div, which shows or hides the abstract text when the button is clicked. -->
    <script>
-      function toggleAbstract() {
-          var content = document.getElementById('abstract-content');
-          if (content.style.display === 'none' || content.style.display === '') {
-              content.style.display = 'block';
-          } else {
-              content.style.display = 'none';
-          }
-      }
+    function toggleAbstract(abstractId) {
+        var content = document.getElementById(abstractId);
+        if (content.style.display === 'none' || content.style.display === '') {
+            content.style.display = 'block';
+        } else {
+            content.style.display = 'none';
+        }
+    }
     </script>
   
   
