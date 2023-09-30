@@ -72,7 +72,17 @@
       display: none;
     }
   </style>
-  
+<!-- Change style of buttons to hide/show Abstract of papers -->
+  <style>
+    .abstract-button {
+      border: none;
+      background-color: transparent;
+      color: rgb(208, 32, 144);  /* This is a darker pink color */
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
+    
 </head>
 <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-   -->
                                          <!-- end of custom Head snippets-->
@@ -183,7 +193,7 @@
 <!--       <br>
         <small> <a href="https://EdoardoBriganti.github.io/research/paper_draft_MAR2023_whydoesgdp.pdf" style="color:blue"> [<u>PDF</u>] </a>  <a href="https://EdoardoBriganti.github.io/research/paper_draft_MAR2023_whydoesgdp_appendix.pdf" style="color:blue"> [<u>Online Appendix</u>] </a> </small>  -->
       <br> 
-        <button onclick="toggleAbstract('abstract-content-1')" style="border: none; background-color: transparent; color: pink; text-decoration: underline; cursor: pointer;"><small><i>Read Abstract</i></small></button>
+        <button class="abstract-button" onclick="toggleAbstract('abstract-content-1')"><small><i>Read Abstract</i></small></button>
         <div id="abstract-content-1" style="display:none;">
             <p> <small>            I construct a novel quarterly series of US military prime contract awards spanning from 1947:1 onward.
                                    Defense contracts: (i) account for the anticipatory effects of government spending (G); 
@@ -213,7 +223,7 @@
           <br>
             <small> <a href="https://EdoardoBriganti.github.io/research/paper_draft_MAR2023_whydoesgdp.pdf" style="color:blue"> [<u>PDF</u>] </a>  <a href="https://EdoardoBriganti.github.io/research/paper_draft_MAR2023_whydoesgdp_appendix.pdf" style="color:blue"> [<u>Online Appendix</u>] </a> </small> 
           <br> 
-            <button onclick="toggleAbstract('abstract-content-2')" style="border: none; background-color: transparent; color: pink; text-decoration: underline; cursor: pointer;"><small><i>Read Abstract</i></small></button>
+            <button class="abstract-button" onclick="toggleAbstract('abstract-content-2')" ><small><i>Read Abstract</i></small></button>
             <div id="abstract-content-2" style="display:none;">
                 <p> <small>            We find that the early impact of defense news shocks on GDP is due to a rise in business inventories, 
                                        as contractors ramp up production for new defense contracts. These contracts do not affect government 
@@ -232,7 +242,7 @@
       <br>
         <small> <a href="https://EdoardoBriganti.github.io/research/paper_draft_DEC2022_networkeffect.pdf" style="color:blue"> [<u>PDF</u>] </a>  </small> 
       <br> 
-        <button onclick="toggleAbstract('abstract-content-3')" style="border: none; background-color: transparent; color: pink; text-decoration: underline; cursor: pointer;"><small><i>Read Abstract</i></small></button>
+        <button class="abstract-button" onclick="toggleAbstract('abstract-content-3')"><small><i>Read Abstract</i></small></button>
         <div id="abstract-content-3" style="display:none;">
             <p> <small>           We study the effects of fiscal consolidations in the United States and their propagation in the production network. 
                                   We use a narrative approach to identify fiscal adjustments which are exogenous to output fluctuations. Then we apply spatial
@@ -264,7 +274,7 @@
       <li>  <small>  <b> The Firm Level Effects of Federal Purchases </b>  with <u> Holt Dwyer </u> and 
         <a href="https://victorsellemi.com"><u>Victor Sellemi</u>. </a>  </small>
       <br> 
-        <small> Project has been granted <b>Restricted Data Access to <u>Longitudinal Database of Establihsments (LDE)</u> </b> by the Bureau of Labor Statistics (BLS). First visit: <u> March 2024 </u>. </small>
+        <small> Project has been granted <b>Restricted Data Access to <a href="https://www.bls.gov/rda/what-datasets-are-available.htm"> <u>Longitudinal Database of Establihsments (LDE)</u> </b> </a> by the Bureau of Labor Statistics (BLS). First visit: <u> March 2024 </u>. </small>
       <br>
         <small> <i> Summary: </i>  We employ contract-level data sourced from the Federal Procurement Data System - Next Generation (FPDS-NG) spanning
                                    the years 2000 to 2020 to delineate "regional-product public procurement markets." By harmonizing the contract-specific
