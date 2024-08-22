@@ -214,6 +214,20 @@
 <!--   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-       -->  
    <script src="https://EdoardoBriganti.github.io/assets/js/main.min.js">
    </script>
+
+
+  <!-- The toggleAbstract function is defined in a <script> tag. This function toggles the hidden class on the #abstract div, which shows or hides the abstract text when the button is clicked. -->
+   <script>
+    function toggleAbstract(abstractId) {
+        var content = document.getElementById(abstractId);
+        if (content.style.display === 'none' || content.style.display === '') {
+            content.style.display = 'block';
+        } else {
+            content.style.display = 'none';
+        }
+    }
+    </script>
+  
  </body>
   
 </html>
