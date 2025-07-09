@@ -7,6 +7,15 @@
   <meta name="author" content="Edoardo Briganti">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Font Awesome for social icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pap2bO0q6zGPjBJ+eZ+6YB8YK5oO1mX8w+zsrh0i6eSX3VqOaSA7uE6+c+U0hfHlp5zqfGb2ZJZ8oxA/6T3zOA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179250369-1"></script>
   <script>
@@ -52,12 +61,59 @@
       object-position: center;
     }
 
+    /* New profile details */
+    .profile-details {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .profile-details h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.25rem;
+    }
+    .profile-details p {
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+
     .bio { max-width: 600px; }
     @media (min-width: 768px) { .bio { margin-left: 2rem; } }
 
+    /* Increase spacing between bio paragraphs */
+    .bio p + p {
+      margin-top: 1.5rem;
+    }
+
+    /* Updates section */
+    .updates {
+      padding: 2rem 0;
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
+      margin: 2rem 0;
+    }
+    .updates h3 {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+      color: red;
+    }
+    .updates ul {
+      list-style: disc inside;
+      opacity: 0.9;
+    }
+
     /* Footer */
     footer { border-top: 1px solid #333; padding: 1rem 0; text-align: center; }
-    .social-icons { list-style: none; display: flex; gap: 1rem; justify-content: center; margin-top: 0.5rem; }
+    .social-icons { list-style: none; display: flex; gap: 1.5rem; justify-content: center; margin-top: 0.5rem; }
+    .social-icons a { font-size: 1.5rem; }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
   </style>
 </head>
 <body>
@@ -78,6 +134,10 @@
     <div class="profile-pic">
       <img src="/img/professional_headshot.jpg" alt="Edoardo Briganti">
     </div>
+    <div class="profile-details">
+      <h2>Edoardo Briganti</h2>
+      <p>Bank of Canada</p>
+    </div>
     <div class="bio">
       <p>I am a senior economist at the <a href="https://www.bankofcanada.ca/" target="_blank" rel="noopener">Bank of Canada</a>. 
          I work in the Economic and Financial Research (EFR) and Canadian Economic Analysis (CEA) departments.</p>
@@ -88,16 +148,39 @@
       
       <p><strong>Email:</strong> ebriganti [at] bankofcanada.ca</p>
 
-      <p><small><em><strong>Disclaimer</strong>: The views and materials on this website are those of the author and do not necessarily reflect the views of the Bank of Canada or its staff.</em> </small></p>
+      <p><small><em><strong>Disclaimer</strong>: The views and materials on this website are those of the author and do not necessarily reflect the views of the Bank of Canada or its staff.</em></small></p>
     </div>
   </main>
+
+  <!-- New Updates Section -->
+  <section class="container updates">
+    <h3>Recent and upcoming talks, news, updates:</h3>
+    <ul>
+      <li>new paper</li>
+    </ul>
+  </section>
 
   <footer class="container">
     <div><strong>Follow me on:</strong></div>
     <ul class="social-icons">
-      <li><a href="https://twitter.com/EBriganti_bdv" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://github.com/EdoardoBriganti" target="_blank" rel="noopener">GitHub</a></li>
-      <li><a href="https://www.linkedin.com/in/edoardo-briganti-2b48b2108/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li>
+        <a href="https://twitter.com/EBriganti_bdv" target="_blank" rel="noopener">
+          <i class="fab fa-twitter"></i>
+          <span class="sr-only">Twitter</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/EdoardoBriganti" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i>
+          <span class="sr-only">GitHub</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/edoardo-briganti-2b48b2108/" target="_blank" rel="noopener">
+          <i class="fab fa-linkedin"></i>
+          <span class="sr-only">LinkedIn</span>
+        </a>
+      </li>
     </ul>
   </footer>
 </body>
