@@ -21,7 +21,7 @@
     /* Reset & Base */
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html, body { height: 100%; background: #000; color: #fff; font-family: -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.5; }
-    a { color: #d02090; text-decoration: none; }
+    a { color: red; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
     /* Container */
@@ -34,13 +34,13 @@
     nav a { font-size: 1rem; }
 
     /* Main Splash Section */
-    .splash { display: flex; flex-direction: column; align-items: center; text-align: center; min-height: 80vh; justify-content: center; }
+    .splash { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; min-height: 80vh; padding-top: 2rem; }
     @media (min-width: 768px) {
       .splash { flex-direction: row; text-align: left; }
     }
     .profile-pic {
       flex-shrink: 0;
-      width: 200px; height: 200px;
+      width: 220px; height: 220px;
       border-radius: 50%;
       overflow: hidden;
       margin-bottom: 1rem;
