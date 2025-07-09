@@ -7,7 +7,7 @@
   <meta name="author" content="Edoardo Briganti">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Font Awesome for social icons -->
+  <!-- Font Awesome (brands + solid) -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -44,9 +44,7 @@
       flex-shrink: 0;
       margin-bottom: 1.5rem;
     }
-    @media (min-width: 768px) {
-      .profile { margin-right: 2rem; }
-    }
+    @media (min-width: 768px) { .profile { margin-right: 2rem; } }
 
     .profile-pic {
       width: 240px;
@@ -55,33 +53,21 @@
       overflow: hidden;
     }
     .profile-pic img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
+      width: 100%; height: 100%; object-fit: cover; object-position: center;
     }
     .profile-details {
-      margin-top: 0.5rem;
-      text-align: center;
+      margin-top: 0.5rem; text-align: center;
     }
-    .profile-details h2 {
-      font-size: 1.5rem;
-      color: #fff;
-    }
-    .profile-details p {
-      font-size: 1rem;
-      opacity: 0.8;
-    }
+    .profile-details h2 { font-size: 1.5rem; }
+    .profile-details p { font-size: 1rem; opacity: 0.8; }
 
     .bio { max-width: 600px; }
     @media (min-width: 768px) { .bio { flex: 1; } }
 
     /* More space between paragraphs in .bio */
-    .bio p + p {
-      margin-top: 1.5rem;
-    }
+    .bio p + p { margin-top: 1.5rem; }
 
-    /* Updates section aligned inside .container */
+    /* Updates section: full-width borders, but content inside .container */
     .updates {
       border-top: 1px solid #333;
       border-bottom: 1px solid #333;
@@ -89,31 +75,22 @@
       margin: 2rem 0;
     }
     .updates h3 {
-      font-size: 1.25rem;
-      color: red;
-      margin-bottom: 1rem;
+      font-size: 1.25rem; color: red; margin-bottom: 1rem;
     }
     .updates ul {
-      list-style: disc inside;
-      opacity: 0.9;
+      list-style: disc inside; opacity: 0.9;
     }
 
     /* Footer */
     footer { text-align: center; padding: 1rem 0; }
     .social-icons { list-style: none; display: flex; gap: 1.5rem; justify-content: center; margin-top: 0.5rem; }
-    .social-icons a { font-size: 1.5rem; color: #fff; }
+    .social-icons a { font-size: 1.5rem; color: #fff; display: inline-flex; align-items: center; justify-content: center; width: 1.5em; height: 1.5em; }
     .social-icons a:hover { color: red; }
 
-    /* Hide screen‐reader only text visually */
+    /* Screen-reader only text */
     .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0,0,0,0);
-      border: 0;
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0); border: 0;
     }
   </style>
 </head>
@@ -132,7 +109,6 @@
   </header>
 
   <main class="container splash">
-    <!-- Wrap pic + name in its own flex‐column block -->
     <div class="profile">
       <div class="profile-pic">
         <img src="/img/professional_headshot.jpg" alt="Edoardo Briganti">
@@ -157,12 +133,14 @@
     </div>
   </main>
 
-  <!-- properly inside .container so it lines up -->
-  <section class="container updates">
-    <h3>Recent and upcoming talks, news, updates:</h3>
-    <ul>
-      <li>new paper</li>
-    </ul>
+  <!-- Updates section full-width, content aligned via inner .container -->
+  <section class="updates">
+    <div class="container">
+      <h3>Recent and upcoming talks, news, updates:</h3>
+      <ul>
+        <li>new paper</li>
+      </ul>
+    </div>
   </section>
 
   <footer class="container">
@@ -170,17 +148,20 @@
     <ul class="social-icons">
       <li>
         <a href="https://twitter.com/EBriganti_bdv" target="_blank" rel="noopener">
-          <i class="fab fa-x"></i><span class="sr-only">X</span>
+          <i class="fas fa-xmark fa-fw" aria-hidden="true"></i>
+          <span class="sr-only">Twitter</span>
         </a>
       </li>
       <li>
         <a href="https://github.com/EdoardoBriganti" target="_blank" rel="noopener">
-          <i class="fab fa-github"></i><span class="sr-only">GitHub</span>
+          <i class="fab fa-github fa-fw" aria-hidden="true"></i>
+          <span class="sr-only">GitHub</span>
         </a>
       </li>
       <li>
         <a href="https://www.linkedin.com/in/edoardo-briganti-2b48b2108/" target="_blank" rel="noopener">
-          <i class="fab fa-linkedin"></i><span class="sr-only">LinkedIn</span>
+          <i class="fab fa-linkedin fa-fw" aria-hidden="true"></i>
+          <span class="sr-only">LinkedIn</span>
         </a>
       </li>
     </ul>
