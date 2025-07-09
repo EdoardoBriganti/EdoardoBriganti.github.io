@@ -16,16 +16,6 @@
     referrerpolicy="no-referrer"
   />
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179250369-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'UA-179250369-1');
-  </script>
-
-  <!-- Custom Styles -->
   <style>
     /* Reset & Base */
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -43,16 +33,26 @@
     nav a { font-size: 1rem; }
 
     /* Main Splash Section */
-    .splash { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 2rem; }
-    @media (min-width: 768px) { .splash { flex-direction: row; text-align: left; } }
+    .splash { display: flex; flex-direction: column; align-items: center; padding-top: 2rem; }
+    @media (min-width: 768px) { .splash { flex-direction: row; align-items: flex-start; } }
+
+    /* Profile block wraps picture + name/affiliation */
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+      margin-bottom: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .profile { margin-right: 2rem; }
+    }
 
     .profile-pic {
       width: 240px;
       height: 240px;
       border-radius: 80%;
       overflow: hidden;
-      margin-bottom: 1rem;
-      flex-shrink: 0;
     }
     .profile-pic img {
       width: 100%;
@@ -60,15 +60,13 @@
       object-fit: cover;
       object-position: center;
     }
-
-    /* New profile details */
     .profile-details {
+      margin-top: 0.5rem;
       text-align: center;
-      margin-bottom: 2rem;
     }
     .profile-details h2 {
       font-size: 1.5rem;
-      margin-bottom: 0.25rem;
+      color: #fff;
     }
     .profile-details p {
       font-size: 1rem;
@@ -76,24 +74,24 @@
     }
 
     .bio { max-width: 600px; }
-    @media (min-width: 768px) { .bio { margin-left: 2rem; } }
+    @media (min-width: 768px) { .bio { flex: 1; } }
 
-    /* Increase spacing between bio paragraphs */
+    /* More space between paragraphs in .bio */
     .bio p + p {
       margin-top: 1.5rem;
     }
 
-    /* Updates section */
+    /* Updates section aligned inside .container */
     .updates {
-      padding: 2rem 0;
       border-top: 1px solid #333;
       border-bottom: 1px solid #333;
+      padding: 2rem 0;
       margin: 2rem 0;
     }
     .updates h3 {
-      margin-bottom: 1rem;
       font-size: 1.25rem;
       color: red;
+      margin-bottom: 1rem;
     }
     .updates ul {
       list-style: disc inside;
@@ -101,9 +99,12 @@
     }
 
     /* Footer */
-    footer { border-top: 1px solid #333; padding: 1rem 0; text-align: center; }
+    footer { text-align: center; padding: 1rem 0; }
     .social-icons { list-style: none; display: flex; gap: 1.5rem; justify-content: center; margin-top: 0.5rem; }
-    .social-icons a { font-size: 1.5rem; }
+    .social-icons a { font-size: 1.5rem; color: #fff; }
+    .social-icons a:hover { color: red; }
+
+    /* Hide screen‐reader only text visually */
     .sr-only {
       position: absolute;
       width: 1px;
@@ -131,28 +132,32 @@
   </header>
 
   <main class="container splash">
-    <div class="profile-pic">
-      <img src="/img/professional_headshot.jpg" alt="Edoardo Briganti">
+    <!-- Wrap pic + name in its own flex‐column block -->
+    <div class="profile">
+      <div class="profile-pic">
+        <img src="/img/professional_headshot.jpg" alt="Edoardo Briganti">
+      </div>
+      <div class="profile-details">
+        <h2>Edoardo Briganti</h2>
+        <p>Bank of Canada</p>
+      </div>
     </div>
-    <div class="profile-details">
-      <h2>Edoardo Briganti</h2>
-      <p>Bank of Canada</p>
-    </div>
+
     <div class="bio">
       <p>I am a senior economist at the <a href="https://www.bankofcanada.ca/" target="_blank" rel="noopener">Bank of Canada</a>. 
          I work in the Economic and Financial Research (EFR) and Canadian Economic Analysis (CEA) departments.</p>
-      
+
       <p>I received my PhD in Economics from <a href="https://economics.ucsd.edu" target="_blank" rel="noopener">UC San Diego</a> in June 2024.</p>
-      
+
       <p><strong>Research Interests:</strong> Macroeconomics, Fiscal and Monetary Policy, Production Networks, Public Economics.</p>
-      
+
       <p><strong>Email:</strong> ebriganti [at] bankofcanada.ca</p>
 
       <p><small><em><strong>Disclaimer</strong>: The views and materials on this website are those of the author and do not necessarily reflect the views of the Bank of Canada or its staff.</em></small></p>
     </div>
   </main>
 
-  <!-- New Updates Section -->
+  <!-- properly inside .container so it lines up -->
   <section class="container updates">
     <h3>Recent and upcoming talks, news, updates:</h3>
     <ul>
@@ -165,20 +170,17 @@
     <ul class="social-icons">
       <li>
         <a href="https://twitter.com/EBriganti_bdv" target="_blank" rel="noopener">
-          <i class="fab fa-twitter"></i>
-          <span class="sr-only">Twitter</span>
+          <i class="fab fa-x"></i><span class="sr-only">X</span>
         </a>
       </li>
       <li>
         <a href="https://github.com/EdoardoBriganti" target="_blank" rel="noopener">
-          <i class="fab fa-github"></i>
-          <span class="sr-only">GitHub</span>
+          <i class="fab fa-github"></i><span class="sr-only">GitHub</span>
         </a>
       </li>
       <li>
         <a href="https://www.linkedin.com/in/edoardo-briganti-2b48b2108/" target="_blank" rel="noopener">
-          <i class="fab fa-linkedin"></i>
-          <span class="sr-only">LinkedIn</span>
+          <i class="fab fa-linkedin"></i><span class="sr-only">LinkedIn</span>
         </a>
       </li>
     </ul>
