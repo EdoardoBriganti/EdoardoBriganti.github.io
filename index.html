@@ -20,7 +20,7 @@
   <style>
     /* Reset & Base */
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { height: 100%; background: #000; color: #fff; font-family: -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.5; }
+    html, body { background: #000; color: #fff; font-family: -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.5; }
     a { color: red; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
@@ -29,36 +29,37 @@
 
     /* Header & Nav */
     header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding-bottom: 1rem; }
-    .site-title { font-size: 1.75rem; font-weight: bold; }
+    .site-title a { font-size: 1.75rem; font-weight: bold; color: red; }
     nav ul { list-style: none; display: flex; gap: 1rem; }
     nav a { font-size: 1rem; }
 
     /* Main Splash Section */
-    .splash { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; min-height: 80vh; padding-top: 2rem; }
-    @media (min-width: 768px) {
-      .splash { flex-direction: row; text-align: left; }
-    }
+    .splash { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 2rem; }
+    @media (min-width: 768px) { .splash { flex-direction: row; text-align: left; } }
+
     .profile-pic {
-      flex-shrink: 0;
-      width: 220px; height: 220px;
+      width: 240px;
+      height: 240px;
       border-radius: 50%;
       overflow: hidden;
       margin-bottom: 1rem;
+      flex-shrink: 0;
     }
     .profile-pic img {
-      width: 100%; height: 100%; object-fit: cover;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
     }
+
     .bio { max-width: 600px; }
-    @media (min-width: 768px) {
-      .bio { margin-left: 2rem; }
-    }
+    @media (min-width: 768px) { .bio { margin-left: 2rem; } }
 
     /* Footer */
     footer { border-top: 1px solid #333; padding: 1rem 0; text-align: center; }
     .social-icons { list-style: none; display: flex; gap: 1rem; justify-content: center; margin-top: 0.5rem; }
   </style>
 </head>
-
 <body>
   <header class="container">
     <div class="site-title">
