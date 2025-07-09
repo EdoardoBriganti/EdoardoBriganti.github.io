@@ -41,18 +41,10 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      flex-shrink: 0;
-      margin-bottom: 2rem;
       text-align: center;
+      margin-bottom: 2rem;
     }
-    @media (min-width: 768px) { .profile { margin-right: 2rem; width: 240px; } }
-    .profile-pic {
-      width: 240px; height: 240px;
-      border-radius: 80%; overflow: hidden;
-    }
-    .profile-pic img {
-      width: 100%; height: 100%; object-fit: cover; object-position: center;
-    }
+    @media (min-width: 768px) { .profile { margin-right: 2rem; width: auto; } }
     .profile-details h2 { font-size: 1.5rem; margin-top: 0.5rem; }
     .profile-details p { font-size: 1rem; opacity: 0.8; margin-bottom: 0.5rem; }
 
@@ -84,16 +76,13 @@
       <ul>
         <li><a href="/">About</a></li>
         <li><a href="/Edoardo_Briganti_Resume.pdf" target="_blank" rel="noopener">CV</a></li>
-        <li><a href="/research/">Research</a></li>
+        <li><a href="/research/">Working Papers</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="container splash">
     <div class="profile">
-      <div class="profile-pic">
-        <img src="/img/img_research.png" alt="Edoardo Briganti">
-      </div>
       <div class="profile-details">
         <h2>Edoardo Briganti</h2>
         <p>PhD Candidate, UC San Diego</p>
@@ -128,13 +117,11 @@
           with <a href="https://sites.google.com/site/gillianmbrunet/"><u>Gillian Brunet</u></a> and <a href="https://victorsellemi.com"><u>Victor Sellemi</u></a><br>
           <button class="abstract-button" onclick="toggleAbstract('abstract-1')"><small><i>Read Abstract</i></small></button>
           <div id="abstract-1" style="display:none; margin-top:0.5rem;">
-            <small>Since government spending is a long, complex process and not an event that occurs at a single point in time, its timing depends on its measurement. In this paper, we argue that national income accounting (NIPA) measures government spending too late in the process to fully capture its economic effects, resulting in a systematic downward bias in aggregate time series estimates of the fiscal multiplier. This bias occurs because new government purchases initially show up in GDP as inventory investment rather than government purchases. We combine budget and contract data to produce an alternate measure of government spending based on authorizations. This new measure anticipates NIPA G by 3-4 quarters and allows for cleaner, more precise identification of fiscal shocks. We show that our new measure produces time series multiplier estimates of approximately 1 or higher at all time horizons using both linear projection (LP-IV) and structural VAR methods.
-
-</small>
+            <small>Since government spending is a long, complex process and not an event that occurs at a single point in time, its timing depends on its measurement. In this paper, we argue that national income accounting (NIPA) measures government spending too late in the process to fully capture its economic effects, resulting in a systematic downward bias in aggregate time series estimates of the fiscal multiplier. This bias occurs because new government purchases initially show up in GDP as inventory investment rather than government purchases. We combine budget and contract data to produce an alternate measure of government spending based on authorizations. This new measure anticipates NIPA G by 3-4 quarters and allows for cleaner, more precise identification of fiscal shocks. We show that our new measure produces time series multiplier estimates of approximately 1 or higher at all time horizons using both linear projection (LP-IV) and structural VAR methods.</small>
           </div>
         </li>
 
-        <!-- repeat each paper in the same pattern -->
+        
 
       </ul>
 
