@@ -1,406 +1,184 @@
-<!doctype html>
-<!--
-  Minimal Mistakes Jekyll Theme 4.4.1 by Michael Rose
-  Copyright 2017 Michael Rose - mademistakes.com | @mmistakes
-  Free for personal and commercial use under the MIT license
-  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
--->
-<html lang="en" class="no-js">
-  
-<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-   -->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    
-<!-- begin SEO -->
+  <meta charset="utf-8">
+  <title>Edoardo Briganti – Research</title>
+  <meta name="description" content="Research page for Edoardo Briganti">
+  <meta name="author" content="Edoardo Briganti">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179250369-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Font Awesome (brands + solid) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 
-  gtag('config', 'UA-179250369-1');
-</script>
-
-  
-<meta charset="utf-8">
-
-<title>Edoardo Briganti</title>
-
-<meta name="description" content="Academic and personal site for Edoardo Briganti">
-
-<meta name="author" content="Edoardo Briganti">
-
-<meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="Edoardo Briganti">
-<meta property="og:title" content="Edoardo Briganti">
-
-<link rel="canonical" href="https://EdoardoBriganti.github.io/">
-
-<meta property="og:url" content="https://EdoardoBriganti.github.io/">
-
-<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-   -->
-                                                   <!-- end SEO -->
-
-    
-    
-    
-<!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    
-    
-<script>
-  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-</script>
-
-<!-- For all browsers -->
-<link rel="stylesheet" href="https://EdoardoBriganti.github.io/assets/css/main.css">
-
-
-<meta http-equiv="cleartype" content="on">
-    <!-- start custom head snippets -->
-
-<!-- insert favicons. use http://realfavicongenerator.net/ -->
-
-    
-<!-- A CSS class hidden is defined with a display: none; property to hide elements.  -->
   <style>
-    .hidden {
-      display: none;
+    /* Reset & Base */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { background: #000; color: #fff; font-family: -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.5; }
+    a { color: red; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Container */
+    .container { max-width: 960px; margin: 0 auto; padding: 1rem; }
+
+    /* Header & Nav */
+    header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding-bottom: 1rem; }
+    .site-title a { font-size: 1.75rem; font-weight: bold; color: red; }
+    nav ul { list-style: none; display: flex; gap: 1rem; }
+    nav a { font-size: 1rem; }
+
+    /* Main layout */
+    .splash { display: flex; flex-direction: column; padding-top: 2rem; }
+    @media (min-width: 768px) { .splash { flex-direction: row; align-items: flex-start; } }
+
+    /* Profile block */
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+      margin-bottom: 2rem;
+      text-align: center;
     }
-  </style>
-<!-- Change style of buttons to hide/show Abstract of papers -->
-  <style>
+    @media (min-width: 768px) { .profile { margin-right: 2rem; width: 240px; } }
+    .profile-pic {
+      width: 240px; height: 240px;
+      border-radius: 80%; overflow: hidden;
+    }
+    .profile-pic img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center;
+    }
+    .profile-details h2 { font-size: 1.5rem; margin-top: 0.5rem; }
+    .profile-details p { font-size: 1rem; opacity: 0.8; margin-bottom: 0.5rem; }
+
+    /* Social icons */
+    .social-icons { list-style: none; display: flex; gap: 1rem; justify-content: center; }
+    .social-icons a { font-size: 1.25rem; color: #fff; display: inline-flex; align-items: center; justify-content: center; width: 1.5em; height: 1.5em; }
+    .social-icons a:hover { color: red; }
+
+    /* Content area */
+    .content { flex: 1; }
+    .content h3 { font-size: 1.25rem; color: red; margin-bottom: 1rem; }
+    .content ul { list-style: disc inside; margin-bottom: 2rem; }
+    .content li { margin-bottom: 1.5rem; }
     .abstract-button {
-      border: none;
-      background-color: transparent;
-      color: rgb(208, 32, 144);  /* This is a darker pink color */
-      text-decoration: underline;
-      cursor: pointer;
+      border: none; background: transparent; color: rgb(208,32,144);
+      text-decoration: underline; cursor: pointer; font: inherit;
     }
+
+    /* Footer */
+    footer { text-align: center; padding: 1rem 0; margin-top: 2rem; }
   </style>
-    
 </head>
-<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-   -->
-                                         <!-- end of custom Head snippets-->
-<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-   -->
-
-  
-  
-  
-  
-  
-  
-<body class="layout--home">
-
-<!--   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- --> 
-<!--       HEADER OF PAGE "RESEARCH":     -->
-<!--   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- -->
-<div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        
-        <a class="site-title" href="https://EdoardoBriganti.github.io/"><p style="font-size:40px" >Edoardo Briganti</p></a>
-        
-        <ul class="visible-links">
-          
-          <li class="masthead__menu-item"><a href="https://EdoardoBriganti.github.io/">About</a></li>
-          
-          <li class="masthead__menu-item"><a href="https://EdoardoBriganti.github.io/Edoardo_Briganti_Resume.pdf">CV</a></li>
-          
-          <li class="masthead__menu-item"><a href="https://EdoardoBriganti.github.io/research/">Research</a></li>
-      
-       </nav>     
+<body>
+  <header class="container">
+    <div class="site-title">
+      <a href="/">Edoardo Briganti</a>
     </div>
-  </div>
-</div>
+    <nav>
+      <ul>
+        <li><a href="/">About</a></li>
+        <li><a href="/Edoardo_Briganti_Resume.pdf" target="_blank" rel="noopener">CV</a></li>
+        <li><a href="/research/">Research</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<!--   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- -->
-<!--       SIDEBAR WITH MULTIMEDIA CONTENTS & PICTURE    -->
-<!--   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- -->
-<div id="main" role="main">
-  <div class="sidebar sticky">
-    <div itemscope itemtype="http://schema.org/Person">
-      
-<!--  Upload Avatar Picture -->    
-      <div class="author__avatar">
-        <img src="https://EdoardoBriganti.github.io/img/img_research.png" class="author__avatar" alt="Edoardo Briganti" itemprop="image">
+  <main class="container splash">
+    <div class="profile">
+      <div class="profile-pic">
+        <img src="/img/img_research.png" alt="Edoardo Briganti">
       </div>
-      
-<!--  Description of me -->
-      <div class="author__content">
-        <h3 class="author__name" itemprop="name">Edoardo Briganti</h3>
-        <p class="author__bio" itemprop="description">PhD Candidate,
-          <br> UC San Diego. </p>
-      </div>
-
-<!-- Multimedia Hyperlinks -->
-      <div class="author__urls-wrapper"><button class="btn btn--inverse">Follow</button>
-        
-        <ul class="author__urls social-icons">
-          
-<!--           Location -->
-          <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
-            <a href="https://www.google.com/maps/place/4327+Benhurst+Ave,+San+Diego,+CA+92122/@32.8533549,-117.2000484,17z/data=!3m1!4b1!4m5!3m4!1s0x80dc00c012049aa9:0x873f8cc856795fa7!8m2!3d32.8533549!4d-117.1978597">
-              <i class="fa fa-fw fa-map-marker" aria-hidden="true">  <span itemprop="name">San Diego, CA</span> </i> </a> </li>
-          
-<!--           LinkedIn -->
-          <li><a href="https://www.linkedin.com/in/edoardo-briganti-2b48b2108/" itemprop="sameAs"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn </a> </li>        
-
-<!--           Twitter -->
-          <li><a href="https://twitter.com/EBriganti_bdv" itemprop="sameAs"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i> X (Twitter) </a> </li>
-          
-<!--           GitHub -->
-          <li><a href="https://github.com/EdoardoBriganti/" itemprop="sameAs"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub </a> </li>
-          
-
-          
-          
-      <!-- This command line tells you how to link whatever social network to your website:
-          <li><a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs"><i class="fa fa-fw" aria-hidden="true">
-                       </i> Custom Social Profile Link</a></li>
-      -->
+      <div class="profile-details">
+        <h2>Edoardo Briganti</h2>
+        <p>PhD Candidate, UC San Diego</p>
+        <ul class="social-icons">
+          <li>
+            <a href="https://twitter.com/EBriganti_bdv" target="_blank" rel="noopener">
+              <i class="fab fa-twitter fa-fw" aria-hidden="true"></i>
+              <span class="sr-only">Twitter</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/EdoardoBriganti" target="_blank" rel="noopener">
+              <i class="fab fa-github fa-fw" aria-hidden="true"></i>
+              <span class="sr-only">GitHub</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/edoardo-briganti-2b48b2108/" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin fa-fw" aria-hidden="true"></i>
+              <span class="sr-only">LinkedIn</span>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
-  </div>
 
-  <div class="archive">
-    <h1 class="page__title"></h1>
-    <h3 class="archive__subtitle">Working papers</h3>
-    <ul>
-          <!--  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=     -->     
-                       <!--                              List Here the Working Papers                               -->
-      
-<!-- EXAMPLE:
+    <div class="content">
+      <h3>Working Papers</h3>
+      <ul>
+        <li>
+          <strong>When Does Government Spending Matter? It's all in the Measurement</strong> (2022) <em>Rej&R</em> at <em>American Economic Review</em><br>
+          with <a href="https://sites.google.com/site/gillianmbrunet/"><u>Gillian Brunet</u></a> and <a href="https://victorsellemi.com"><u>Victor Sellemi</u></a><br>
+          <button class="abstract-button" onclick="toggleAbstract('abstract-1')"><small><i>Read Abstract</i></small></button>
+          <div id="abstract-1" style="display:none; margin-top:0.5rem;">
+            <small>Since government spending is a long, complex process… [your abstract here]</small>
+          </div>
+        </li>
 
-      <small> <li>  <b> Title of the Project </b> (year) with <a href="CoauthorWebsite"> <u> CoAuthorName </u> </a> .  </small>
-      <br>  
-      <small> <a href="https://EdoardoBriganti.github.io/research/name_of_paper.pdf" style="color:blue"> [<u>PDF</u>] | </a>  
-              <a href="arXive url" style="color:blue">  [<u> arXiv </u>] </a> </small> 
-      <br> 
-      <small> <i> Summary: </i> Provide a super brief description of what is done. </small> 
-      </li> 
+        <!-- repeat each paper in the same pattern -->
 
- -->
+      </ul>
 
-      <!--  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=     -->  
-      <li>  <b> When Does Government Spending Matter? It's all in the Measurement </b> (2022) 
-            <em>Rej&R</em> at <em>American Economic Review</em>.
-          <br>
-            <small> With <a href="https://sites.google.com/site/gillianmbrunet/"><u>Gillian Brunet</u>'s</a> and <a href="https://victorsellemi.com"><u>Victor Sellemi</u>. </small>
-<!--           <br>
-            <small> <a href="https://EdoardoBriganti.github.io/research/measurement_delays.pdf" style="color:blue"> [<u>PDF</u>] </a>  <a href="https://EdoardoBriganti.github.io/research/measurement_delays_appendix.pdf" style="color:blue"> [<u>Online Appendix</u>] </a> </small>  -->
-          <br> 
-            <button class="abstract-button" onclick="toggleAbstract('abstract-content-2')" ><small><i>Read Abstract</i></small></button>
-            <div id="abstract-content-2" style="display:none;">
-                <p> <small>   Since government spending is a long, complex process and not an event that occurs at a single point in time,
-                              its timing depends on its measurement.  In this paper, we argue that national income accounting (NIPA) measures
-                              government spending too late in the process to fully capture its economic effects, resulting in a systematic 
-                              downward bias in aggregate time series estimates of the fiscal multiplier.  This bias occurs because new 
-                              government purchases initially show up in GDP as inventory investment rather than government purchases.  
-                              We combine budget and contract data to produce an alternate measure of government spending based on authorizations.
-                              This new measure anticipates NIPA G by 3-4 quarters and allows for cleaner, more precise identification of fiscal 
-                              shocks.  We show that our new measure produces time series multiplier estimates of approximately 1 or higher at 
-                              all time horizons using both linear projection (LP-IV) and structural VAR methods.
-                </small> </p>
-            </div>
-          <br>
-        <!--  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=     -->  
-            <small> This paper puts together three works: </small>
-              <ul> 
-                <!--  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=     -->  
-                <li>  <em> Why Does GDP Move Before Government Spending? It's all in the Measurement </em> (2022), with <a href="https://victorsellemi.com"><u>Victor Sellemi</u>.
-                    <br>
-                      <small> <a href="https://EdoardoBriganti.github.io/research/paper_draft_MAR2023_whydoesgdp.pdf" style="color:blue"> [<u>PDF</u>] </a>  <a href="https://EdoardoBriganti.github.io/research/paper_draft_MAR2023_whydoesgdp_appendix.pdf" style="color:blue"> [<u>Online Appendix</u>] </a> </small> 
-                    <br> 
-                      <button class="abstract-button" onclick="toggleAbstract('abstract-content-2')" ><small><i>Read Abstract</i></small></button>
-                      <div id="abstract-content-2" style="display:none;">
-                          <p> <small>            We find that the early impact of defense news shocks on GDP is due to a rise in business inventories, 
-                                                 as contractors ramp up production for new defense contracts. These contracts do not affect government 
-                                                 spending (G) until payment-on-delivery, which occurs 2-3 quarters later. Novel data on defense procurement
-                                                 obligations reveals that contract awards Granger-cause shocks to G identified via Cholesky decomposition, 
-                                                 but not defense news shocks. We show that Cholesky shocks to G miss early changes in inventories, and thus
-                                                 result in lower multiplier estimates relative to the narrative method. 
-                          </small> </p>
-                      </div>
-                </li>
-          <!--  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=     --> 
-                <li> <em>When Does Government Spending Matter? Evidence from a New Measure of Defense Spending</em> by Gillian Brunet.
-                </li> 
+      <h3>Dormant Projects</h3>
+      <ul>
+        <li>
+          <strong>Heterogeneous Effects of PIT Shocks: a Regional Approach</strong><br>
+          with <a href="https://carlosgoes.com"><u>Carlos Goes</u></a> and <a href="https://victorsellemi.com"><u>Victor Sellemi</u></a><br>
+          <button class="abstract-button" onclick="toggleAbstract('abstract-2')"><small><i>Read Abstract</i></small></button>
+          <div id="abstract-2" style="display:none; margin-top:0.5rem;">
+            <small>We construct regional income distributions using… [your abstract here]</small>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </main>
 
-          <!--  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=     -->  
-                <li>  The first empirical part of my JMP: <em> On the Effects of Government Purchases and Their Transmission Mechanism  </em>
-                <br>
-                  <small> <a href="https://EdoardoBriganti.github.io/research/edoardo_briganti_JMP.pdf" style="color:blue"> [<u>PDF</u>] </a>  <a href="https://EdoardoBriganti.github.io/research/edoardo_briganti_JMP_appendix.pdf" style="color:blue"> [<u>Online Appendix</u>] </a>  </small>
-                <br> 
-                  <button class="abstract-button" onclick="toggleAbstract('abstract-content-1')"><small><i>Read Abstract</i></small></button>
-                  <div id="abstract-content-1" style="display:none;">
-                      <p> <small>           I use novel data on defense contracts to study the effects of government purchases in the US and develop
-                                            new stylized facts about their transmission mechanism. My methodology leverages the construction of a new
-                                            quarterly series of US military prime contracts, available from 1947:1. Defense contracts: (i) are exogenous
-                                            to output fluctuations; (ii) retain statistical power and robustness across various samples; (iii) accurately
-                                            measure the timing of the shocks; and (iv) obviate the need for narrative analysis. My findings indicate that 
-                                            a positive shock to defense contracts, ordered first in a VAR, bolsters output, inventories, non-durable-plus-service
-                                            consumption, hours worked, employment, labor earnings, disposable income, the price-cost markup, the product-wage,
-                                            and labor productivity. I argue that the observed gains in labor productivity stem from ``learning-by-doing," a
-                                            feature particularly relevant to the production of military items. Further, leveraging a two-sector RBC model, I
-                                            demonstrate that the learning-by-doing induced productivity enhancements in the manufacturing sector suffice to
-                                            increase aggregate consumption, rationalizing the VAR evidence.
-                      </small> </p>
-                  </div>
-                </li>
-              </ul>
-        
-
-      <!--  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=     -->
-      <li>   <b> The Network Effects of Fiscal Adjustment Plans </b> (2018) <em> Rej&R</em> at <em>European Economic Review</em>
-      <br>
-            <small>  With <a href="http://didattica.unibocconi.eu/mypage/index.php?IdUte=48917&cognome=FAVERO&nome=CARLO%20AMBROGIO&urlBackMy="><u>Carlo Favero</u> </a>  
-        and <a href="http://www.madinakaramysheva.com"> <u> Madina Karamysheva</u>. </a> </small>
-      <br>
-        <small> <a href="https://EdoardoBriganti.github.io/research/paper_draft_DEC2022_networkeffect.pdf" style="color:blue"> [<u>PDF</u>] </a>  </small> 
-      <br> 
-        <button class="abstract-button" onclick="toggleAbstract('abstract-content-3')"><small><i>Read Abstract</i></small></button>
-        <div id="abstract-content-3" style="display:none;">
-            <p> <small>           We study the effects of fiscal consolidations in the United States and their propagation in the production network. 
-                                  We use a narrative approach to identify fiscal adjustments which are exogenous to output fluctuations. Then we apply spatial
-                                  econometric techniques to separate the total effect of fiscal adjustments into a direct and network component. We find that 
-                                  fiscal adjustments based on increased taxation are more recessionary than those based on spending cuts. Moreover, one 
-                                  quarter of the difference in their total output effect is explained by the stronger network propagation of taxes relative to 
-                                  government spending. 
-            </small> </p>
-        </div>
-        
+  <footer class="container">
+    <div><strong>Follow me on:</strong></div>
+    <ul class="social-icons">
+      <li>
+        <a href="https://twitter.com/EBriganti_bdv" target="_blank" rel="noopener">
+          <i class="fab fa-twitter fa-fw" aria-hidden="true"></i>
+          <span class="sr-only">Twitter</span>
+        </a>
       </li>
-
-
-       <!--  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=     -->
-      <li>  <b> Breaking Down the U.S. Employment Multiplier Using Micro­Level Data </b> (2024)
-      <br> <small>
-          With <a href="https://holtdwyer.com/"><u>Holt Dywer </u> </a>,
-              <a href="https://www.ricardoduquegabriel.com/"><u>Ricardo Duque Gabriel </u> </a> and
-              <a href="https://victorsellemi.com"><u>Victor Sellemi</u>. </a> 
-            </small>
-      <br>
-            <small> Project was granted <b>Restricted Data Access to <a href="https://www.bls.gov/rda/what-datasets-are-available.htm"> 
-              <u>Longitudinal Database of Establihsments (LDE)</u> </b> </a> by the Bureau of Labor Statistics in September 2021. </small>
-      <br>
-        <small> <a href="https://EdoardoBriganti.github.io/research/procurement_firms_paper.pdf" style="color:blue"> [<u>PDF</u>] </a>  
-                <a href="https://EdoardoBriganti.github.io/research/procurement_firms_online_appendix.pdf" style="color:blue"> [<u>Online Appendix</u>] </a>  </small> 
-      <br> 
-        <button class="abstract-button" onclick="toggleAbstract('abstract-content-4')"><small><i>Read Abstract</i></small></button>
-        <div id="abstract-content-4" style="display:none;">
-            <p> <small>           We use restricted data from the Quarterly Census of Employment and Wages (QCEW) to
-                                  link the universe of U.S. establishments with the universe of contractors in the Federal Procurement
-                                  Data System (FPDS). Leveraging detailed institutional knowledge of federal acquisitions,
-                                  we construct a new set of unanticipated contracts and examine their effects on employment
-                                  growth. We find positive, significant, and persistent effects on firms with fewer than
-                                  150 employees. Using loan data from the Federal Reserve (Y14­Q), we show that small firms
-                                  expand their credit and face lower interest rates after winning unanticipated contracts. At the
-                                  regional level, we estimate a cost­per­job of $57,000 per year using unanticipated contracts—
-                                  an order of magnitude lower than previous estimates based on all defense contracts. Lastly,
-                                  by leveraging restricted QCEW data, we decompose the employment multiplier into a direct
-                                  effect on contractors and an indirect multiplier effect on non­contractors, finding a 55-­45%
-                                  split, respectively.
-            </small> </p>
-        </div>
-        
+      <li>
+        <a href="https://github.com/EdoardoBriganti" target="_blank" rel="noopener">
+          <i class="fab fa-github fa-fw" aria-hidden="true"></i>
+          <span class="sr-only">GitHub</span>
+        </a>
       </li>
-
-    <!--  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=     -->
-      <li>   <b> The High-Frequency Cross-Sectional Identification of Military News Shocks </b> 
-      <br> <small> With <a href="https://www.francescoamodeo.com/"><u>Francesco Amodeo</u>. </a></small>
-      <br>
-<!--         The paper was presented as a "Very Short Paper" Project in Juan Herreno and Johannes Wieland class (Econ 281, Special Topics in Economics) in Spring 2022.  -->
-            <small> First draft available soon </small>
-      <br>
-        <button class="abstract-button" onclick="toggleAbstract('abstract-content-5')"><small><i>Read Abstract</i></small></button>
-        <div id="abstract-content-5" style="display:none;">
-            <p> <small>          This study proposes a novel two-step method to identify and quantify news shocks, applicable to many macroeconomic contexts.
-                                 Combining narrative identification with Large Language Model searches, we compile the set of events (2001–2023) that altered
-                                 the expected path of U.S. defense expenditure. Using cross-sectional regressions of defense contractors’ stock returns on
-                                 their pre-event reliance on military revenues, we estimate market-implied measures of expected defense spending changes. This 
-                                 method validates statistically each event, and quantifies each shock in a simple, model-consistent fashion. Employing these 
-                                 shocks in a shift-share analysis of fiscal policy yields a one-year MSA-level GDP multiplier of approximately 1.3 for U.S. 
-                                military build-ups.
-            </small> </p>
-        </div>
-      </li> 
-    
-    
-<!--   END OF WORKING PAPERS   -->
-  </ul>
-
-
-    
-<!--  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=     -->  
-<!--  WORK IN PROGRESS SECTION: -->
-<!--  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=     -->  
-<!-- <h3 class="archive__subtitle"> Work in Progress </h3>
-    <ul>
-
-      
-      
-    </ul> -->
-
-<!--  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=     -->  
-<!--  Dormant projects SECTION: -->
-<!--  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=     -->
-    <h3 class="archive__subtitle"> Dormant Projects </h3>
-    <ul>
-      
-      <li>  <small>  <b> Heterogeneous Effects of PIT Shocks: a Regional Approach </b>  with <a href="https://carlosgoes.com"> <u> Carlos Goes </u> </a> and 
-        <a href="https://victorsellemi.com"><u>Victor Sellemi</u>. </a>  </small>
-      <br>  
-        <button class="abstract-button" onclick="toggleAbstract('abstract-content-6')"><small><i>Read Abstract</i></small></button>
-        <div id="abstract-content-6" style="display:none;">
-            <p> <small>          We construct regional income distributions using "Generalized Pareto Interpolation" and use them to build region-specific personal
-                                 income tax (PIT) shocks. We examine the regional effects of the tax cuts enacted during the Bush and Trump administrations, 
-                                 as well as the tax increase on top-income earners during the Obama administration.
-            </small> </p>
-        </div>
-      </li> 
-
+      <li>
+        <a href="https://www.linkedin.com/in/edoardo-briganti-2b48b2108/" target="_blank" rel="noopener">
+          <i class="fab fa-linkedin fa-fw" aria-hidden="true"></i>
+          <span class="sr-only">LinkedIn</span>
+        </a>
+      </li>
     </ul>
+  </footer>
 
-
-      
-      
-    
- 
-
-<!--  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=     -->  
-
-  
-<!--  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=     -->  
-<!--  NEW SECTIONS WITH PRESENTATIONS: ADD ONCE PRESENTED A PAPER TO A FORMAL AUDIENCE:
-example:
-<h3 class="archive__subtitle">Recent and Upcoming Presentations</h3>
- <small> EGSC - University of Washington, St. Louis : 10/26/20 <a href="https://urldefense.com/v3/__https://sites.wustl.edu/egsc/about/__;!!Mih3wA!R9HyRDRVfOsu8G9XGpbtWSPUo9m8Ix5UUetkHLY8dJA7W9i6iT22-YGcKG-5V2gR$" style="color:blue">[link] </a> </small>
-<br>
--->
-<!--  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=     -->  
-
-<!-- The toggleAbstract function is defined in a <script> tag. This function toggles the hidden class on the #abstract div, which shows or hides the abstract text when the button is clicked. -->
-   <script>
-    function toggleAbstract(abstractId) {
-        var content = document.getElementById(abstractId);
-        if (content.style.display === 'none' || content.style.display === '') {
-            content.style.display = 'block';
-        } else {
-            content.style.display = 'none';
-        }
+  <script>
+    function toggleAbstract(id) {
+      const el = document.getElementById(id);
+      el.style.display = (el.style.display === 'block') ? 'none' : 'block';
     }
-    </script>
-  
-  
-<!--  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=     -->  
-<!--  DOCUMENT END  -->
-  </body>
-
+  </script>
+</body>
 </html>
