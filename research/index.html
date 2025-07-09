@@ -58,6 +58,7 @@
     .content h3 { font-size: 1.25rem; color: red; margin-bottom: 1rem; }
     .content ul { list-style: disc inside; margin-bottom: 2rem; }
     .content li { margin-bottom: 1.5rem; }
+    .content li ul { list-style: circle inside; margin-top: 0.5rem; margin-left: 1.5rem; }
     .abstract-button {
       border: none; background: transparent; color: rgb(208,32,144);
       text-decoration: underline; cursor: pointer; font: inherit;
@@ -82,7 +83,6 @@
   </header>
 
   <main class="container splash">
-    
     <div class="content">
       <h3>Working Papers</h3>
       <ul>
@@ -93,10 +93,19 @@
           <div id="abstract-1" style="display:none; margin-top:0.5rem;">
             <small>Since government spending is a long, complex process and not an event that occurs at a single point in time, its timing depends on its measurement. In this paper, we argue that national income accounting (NIPA) measures government spending too late in the process to fully capture its economic effects, resulting in a systematic downward bias in aggregate time series estimates of the fiscal multiplier. This bias occurs because new government purchases initially show up in GDP as inventory investment rather than government purchases. We combine budget and contract data to produce an alternate measure of government spending based on authorizations. This new measure anticipates NIPA G by 3-4 quarters and allows for cleaner, more precise identification of fiscal shocks. We show that our new measure produces time series multiplier estimates of approximately 1 or higher at all time horizons using both linear projection (LP-IV) and structural VAR methods.</small>
           </div>
+
+          <!-- Sublist placeholder for a new paper -->
+          <ul>
+            <li>
+              <strong>New Paper Title (placeholder)</strong> (2025) <em>Journal / Working Paper Series</em><br>
+              with <u>Coauthor Name</u><br>
+              <button class="abstract-button" onclick="toggleAbstract('abstract-new')"><small><i>Read Abstract</i></small></button>
+              <div id="abstract-new" style="display:none; margin-top:0.5rem;">
+                <small>Abstract will be added soon.</small>
+              </div>
+            </li>
+          </ul>
         </li>
-
-        
-
       </ul>
 
       <h3>Dormant Projects</h3>
