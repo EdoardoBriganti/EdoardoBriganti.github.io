@@ -1,224 +1,98 @@
-<!doctype html>
-<!--
-  Minimal Mistakes Jekyll Theme 4.4.1 by Michael Rose
-  Copyright 2017 Michael Rose - mademistakes.com | @mmistakes
-  Free for personal and commercial use under the MIT license
-  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
--->
-<html lang="en" class="no-js">
-
-<!--   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-       -->  
-<!--   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-       -->  
-<!--   =-=-=-=-=-=-=-=-     Begin the PREAMBLE of the document     =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-       -->
-<!--   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-       --> 
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="utf-8">
+  <title>Edoardo Briganti</title>
+  <meta name="description" content="Academic and personal site for Edoardo Briganti">
+  <meta name="author" content="Edoardo Briganti">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  
-  
-<!--   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-       -->  
-<!--   =-=-=-=-=-=-=-=-   Begin SEO (Search Engine Optimization)   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-       -->
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179250369-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-179250369-1');
+  </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179250369-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-179250369-1');
-</script>
-
-  
-<meta charset="utf-8">
-
-<title>Edoardo Briganti</title> 
-
-<meta name="description" content="Academic and personal site for Edoardo Briganti">
-<meta name="keywords" content="Edoardo Briganti, Science, UC San Diego, PhD, Economics">
-<meta name="author" content="Edoardo Briganti">
-
-<meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="Edoardo Briganti">
-<meta property="og:title" content="Edoardo Briganti">
-
-<!--   Google Tag Verification -->
-<meta name="google-site-verification" content="R56vC2v8g0utuulH2hdp9sBxIi3bMKkQWEliYLd8qBU" />
-
-  <link rel="canonical" href="https://EdoardoBriganti.github.io/">  
-  <meta property="og:url" content="https://EdoardoBriganti.github.io/"> 
-<!--   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-       --> 
-
-
-
-<!--   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-       --> 
-<!-- VIEWPOINT of the website (still part of style): see presentation here: "http://t.co/dKP3o1e" -->
-  
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-       -->  
-
-<!--  Determine the script ?????    -->
-<script>
-  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-</script>
-
-<!--   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-       --> 
-<!--           Determine the style of the website  (For all browsers: adopt this style)                 -->
-  
-<link rel="stylesheet" href="https://EdoardoBriganti.github.io/assets/css/main.css">
-<!--   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-       -->
-
-    
-
-<!--   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-       -->  
-<!--   =-=-=-=-=-=-=-=-              Other style aspects           =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-       -->
-    <meta http-equiv="cleartype" content="on">
-  
-  
-<!-- start custom head snippets -->
-<!-- insert favicons. use http://realfavicongenerator.net/ -->
-<!--   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-       --> 
-
-<!-- Change style of buttons to hide/show Abstract of papers -->
+  <!-- Custom Styles -->
   <style>
-    .abstract-button {
-      border: none;
-      background-color: transparent;
-      color: rgb(208, 32, 144);  /* This is a darker pink color */
-      text-decoration: underline;
-      cursor: pointer;
+    /* Reset & Base */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; background: #000; color: #fff; font-family: -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.5; }
+    a { color: #d02090; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Container */
+    .container { max-width: 960px; margin: 0 auto; padding: 1rem; }
+
+    /* Header & Nav */
+    header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding-bottom: 1rem; }
+    .site-title { font-size: 1.75rem; font-weight: bold; }
+    nav ul { list-style: none; display: flex; gap: 1rem; }
+    nav a { font-size: 1rem; }
+
+    /* Main Splash Section */
+    .splash { display: flex; flex-direction: column; align-items: center; text-align: center; min-height: 80vh; justify-content: center; }
+    @media (min-width: 768px) {
+      .splash { flex-direction: row; text-align: left; }
     }
+    .profile-pic {
+      flex-shrink: 0;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+    .profile-pic img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .bio { max-width: 600px; }
+    @media (min-width: 768px) {
+      .bio { margin-left: 2rem; }
+    }
+
+    /* Footer */
+    footer { border-top: 1px solid #333; padding: 1rem 0; text-align: center; }
+    .social-icons { list-style: none; display: flex; gap: 1rem; justify-content: center; margin-top: 0.5rem; }
   </style>
-
-  
 </head>
-<!--   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-       -->  
-<!--   =-=-=-=-=-=-=-=-       End the PREAMBLE of the document     =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-       -->
-<!--   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-       --> 
-  
-  
-  
-<!--   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-       -->  
-<!--   =-=-=-=-=-=-=-=-            CONTENTS OF THE WEBSITE         =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-       -->
-<!--   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-       -->
-<body class="layout--splash">
 
-
-  
-<div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        <a class="site-title" href="https://EdoardoBriganti.github.io/"><p style="font-size:40px" >Edoardo Briganti</p></a>
-          <ul class="visible-links">
-          
-            <!--     MAIN PAGE: "ABOUT"         -->
-            <li class="masthead__menu-item"><a href="https://EdoardoBriganti.github.io/">About</a></li>
-          
-            <!--     PAGE 2: "CV". Click on this page to get my CV in .pdf extension       -->
-            <li class="masthead__menu-item"><a href="https://EdoardoBriganti.github.io/Edoardo_Briganti_Resume.pdf">CV</a></li>
-           
-            <!--   PAGE 3: "RESEARCH". Current research and working papers                 -->
-            <li class="masthead__menu-item"><a href="https://EdoardoBriganti.github.io/research/">Research</a></li> 
-          
-            <!--   Other pages I might add in the future:                -->
-            <!--    <li class="masthead__menu-item"><a href="https://EdoardoBriganti.github.io/teaching/">Teaching</a></li> -->
-            <!-- <li class="masthead__menu-item"><a href="https://EdoardoBriganti.github.io/Edoardo-Briganti/blog/">Personal Blog</a></li> -->
-          
-          </ul>
-        <button><div class="navicon"></div></button>
-       <ul class="hidden-links hidden"></ul>
-     </nav>
-   </div>
- </div>
-</div>
-    
-<!--   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-       -->
-<!--   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-       -->
-    
-
-<div id="main" role="main">
-  
-  <article class="splash" itemscope itemtype="http://schema.org/CreativeWork">
-    <section class="page__content" itemprop="text">
-      <div class="feature__wrapper">
-        
-    <!--   insert Figure of myself on the left side of the website      -->
-        <div class="feature__item--right">
-          <div class="archive__item">
-            
-           <div class="archive__item-teaser">
-            <img src="https://EdoardoBriganti.github.io/img/professional_headshot.jpg" alt="" style="width: 420px; height: auto;" > 
-<!--              width="700" height="700" -->
-           </div>
-            
-     <!--   insert my Bio on the right side of the website      -->     
-            <div class="archive__item-body" style="text-align:left; font-size:22px;">
-              <div class="archive__item-excerpt">
-<!--                <h2 id="bio">About</h2> -->
-                <p> I am a senior economist at the <a href="https://www.bankofcanada.ca/">Bank of Canada</a>. I work in the Economic and Finacial Research (EFR) and Canadian Economic Analysis (CEA) departments. </p>
-                <p> I received my PhD in Economics from <a href="https://economics.ucsd.edu">UC San Diego</a> in June 2024. </p>
-                
-                <p> <strong>Research Interests</strong>: Macroeconomics, Fiscal and Monetary Policy, Production Networks and Public Economics.</p>
-                <p> <small><u><i>Disclaimer</i></u>: The views and materials on this website are those of the author and do not necessarily reflect
-                    the views of the Bank of Canada or other members of its staff. </small> </p> 
-
-<!--                 <h2 id="contact">Contact</h2> -->
-                <p> <i> Email</i>: ebriganti "at" bankofcanada.ca </p>
-
-              </div>   
-            </div>
-            
-          </div>
-    </div> 
-        
-    <!--   insert my favorite quote on the bottom of the website      --> 
-<!--         <div style="text-align:right;  font-size:15px">  Favorite quote: <a href="https://jkrishnamurti.org/about-dissolution-speech">"Truth is a pathless land" </a>,  -->
-<!--           Krishnamurti (August 3, 1929) . </div> -->
-
-    </section>
-  </article>
-</div>
-<!--   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-       -->
-  
-  
-<!-- -=-=-=-=-=- --> 
-<!--   FOOTER    -->
-<!-- -=-=-=-=-=- --> 
-<div class="page__footer">
-  <footer>
-    
-    <div class="page__footer-follow"><ul class="social-icons">
-      <li> <strong>Follow me on:</strong></li>
-      <li> <a href="https://twitter.com/EBriganti_bdv"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i> Twitter </a></li>  
-      <li> <a href="https://github.com/EdoardoBriganti"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub </a></li>
-      <li> <a href="https://www.linkedin.com/in/edoardo-briganti-2b48b2108/"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn </a></li> 
+<body>
+  <header class="container">
+    <div class="site-title">
+      <a href="/">Edoardo Briganti</a>
     </div>
+    <nav>
+      <ul>
+        <li><a href="/">About</a></li>
+        <li><a href="/Edoardo_Briganti_Resume.pdf" target="_blank" rel="noopener">CV</a></li>
+        <li><a href="/research/">Research</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <main class="container splash">
+    <div class="profile-pic">
+      <img src="/img/professional_headshot.jpg" alt="Edoardo Briganti">
+    </div>
+    <div class="bio">
+      <p>I am a senior economist at the <a href="https://www.bankofcanada.ca/" target="_blank" rel="noopener">Bank of Canada</a> in the Economic and Financial Research (EFR) and Canadian Economic Analysis (CEA) departments.</p>
+      <p>I received my PhD in Economics from <a href="https://economics.ucsd.edu" target="_blank" rel="noopener">UC San Diego</a> in June 2024.</p>
+      <p><strong>Research Interests:</strong> Macroeconomics, Fiscal and Monetary Policy, Production Networks, Public Economics.</p>
+      <p><small><em>Disclaimer:</em> The views and materials on this website are those of the author and do not necessarily reflect the views of the Bank of Canada or its staff.</small></p>
+      <p><em>Email:</em> ebriganti<span>@</span>bankofcanada.ca</p>
+    </div>
+  </main>
+
+  <footer class="container">
+    <div><strong>Follow me on:</strong></div>
+    <ul class="social-icons">
+      <li><a href="https://twitter.com/EBriganti_bdv" target="_blank" rel="noopener">Twitter</a></li>
+      <li><a href="https://github.com/EdoardoBriganti" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/edoardo-briganti-2b48b2108/" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
   </footer>
-</div>
-
-    
-<!--   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-       -->
-<!--   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-       -->  
-   <script src="https://EdoardoBriganti.github.io/assets/js/main.min.js">
-   </script>
-
-
-  <!-- The toggleAbstract function is defined in a <script> tag. This function toggles the hidden class on the #abstract div, which shows or hides the abstract text when the button is clicked. -->
-   <script>
-    function toggleAbstract(abstractId) {
-        var content = document.getElementById(abstractId);
-        if (content.style.display === 'none' || content.style.display === '') {
-            content.style.display = 'block';
-        } else {
-            content.style.display = 'none';
-        }
-    }
-    </script>
-  
- </body>
-  
+</body>
 </html>
-
