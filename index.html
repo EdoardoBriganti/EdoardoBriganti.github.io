@@ -31,6 +31,11 @@
     gtag('config', 'G-3FJ8LKLVZT');
   </script>
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <!-- Font Awesome (brands + solid) -->
   <link
     rel="stylesheet"
@@ -40,92 +45,17 @@
     referrerpolicy="no-referrer"
   />
 
-  <style>
-    /* Reset & Base */
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { background: #000; color: #fff; font-family: -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.5; }
-    a { color: red; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    /* Container */
-    .container { max-width: 960px; margin: 0 auto; padding: 1rem; }
-
-    /* Header & Nav */
-    header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding-bottom: 1rem; }
-    .site-title a { font-size: 1.75rem; font-weight: bold; color: red; }
-    nav ul { list-style: none; display: flex; gap: 1rem; }
-    nav a { font-size: 1rem; }
-
-    /* Main Splash Section */
-    .splash { display: flex; flex-direction: column; align-items: center; padding-top: 2rem; }
-    @media (min-width: 768px) { .splash { flex-direction: row; align-items: flex-start; } }
-
-    /* Profile block wraps picture + name/affiliation */
-    .profile {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      flex-shrink: 0;
-      margin-bottom: 1.5rem;
-    }
-    @media (min-width: 768px) { .profile { margin-right: 2rem; } }
-
-    .profile-pic {
-      width: 240px;
-      height: 240px;
-      border-radius: 80%;
-      overflow: hidden;
-    }
-    .profile-pic img {
-      width: 100%; height: 100%; object-fit: cover; object-position: center;
-    }
-    .profile-details {
-      margin-top: 0.5rem; text-align: center;
-    }
-    .profile-details h2 { font-size: 1.5rem; }
-    .profile-details p { font-size: 1rem; opacity: 0.8; }
-
-    .bio { max-width: 600px; }
-    @media (min-width: 768px) { .bio { flex: 1; } }
-
-    /* More space between paragraphs in .bio */
-    .bio p + p { margin-top: 1.5rem; }
-
-    /* Updates section: full-width borders, but content inside .container */
-    .updates {
-      border-top: 1px solid #333;
-      border-bottom: 1px solid #333;
-      padding: 2rem 0;
-      margin: 2rem 0;
-    }
-    .updates h3 {
-      font-size: 1.25rem; color: red; margin-bottom: 1rem;
-    }
-    .updates ul {
-      list-style: disc inside; opacity: 0.9;
-    }
-
-    /* Footer */
-    footer { text-align: center; padding: 1rem 0; }
-    .social-icons { list-style: none; display: flex; gap: 1.5rem; justify-content: center; margin-top: 0.5rem; }
-    .social-icons a { font-size: 1.5rem; color: #fff; display: inline-flex; align-items: center; justify-content: center; width: 1.5em; height: 1.5em; }
-    .social-icons a:hover { color: red; }
-
-    /* Screen-reader only text */
-    .sr-only {
-      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-      overflow: hidden; clip: rect(0,0,0,0); border: 0;
-    }
-  </style>
+  <!-- Site stylesheet (shared with /research/) -->
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <header class="container">
+  <header class="container site-header">
     <div class="site-title">
       <a href="/">Edoardo Briganti</a>
     </div>
-    <nav>
+    <nav aria-label="Main">
       <ul>
-        <li><a href="/">About</a></li>
+        <li><a href="/" aria-current="page">About</a></li>
         <li><a href="/Edoardo_Briganti_Resume.pdf" target="_blank" rel="noopener">CV</a></li>
         <li><a href="/research/">Working Papers</a></li>
       </ul>
@@ -136,16 +66,16 @@
     <div class="profile">
       <div class="profile-pic">
         <!-- <img src="/img/professional_headshot.jpg" alt="Edoardo Briganti"> -->
-        <img src="/img/bank_of_canada.jpg" alt="Edoardo Briganti">
+        <img src="/img/bank_of_canada.jpg" alt="Edoardo Briganti" width="600" height="600">
       </div>
       <div class="profile-details">
-        <h2>Edoardo Briganti</h2>
-        <p>Bank of Canada</p>
+        <h1>Edoardo Briganti</h1>
+        <p>Senior Economist, Bank of Canada</p>
       </div>
     </div>
 
     <div class="bio">
-      <p>I am a senior economist at the <a href="https://www.bankofcanada.ca/" target="_blank" rel="noopener">Bank of Canada</a>. 
+      <p>I am a senior economist at the <a href="https://www.bankofcanada.ca/" target="_blank" rel="noopener">Bank of Canada</a>.
          I work in the Economic and Financial Research (EFR) and Canadian Economic Analysis (CEA) departments.</p>
 
       <p>I received my PhD in Economics from <a href="https://economics.ucsd.edu" target="_blank" rel="noopener">UC San Diego</a> in June 2024.</p>
@@ -154,63 +84,75 @@
 
       <p><strong>Email:</strong> ebriganti [at] bankofcanada.ca</p>
 
-      <p><small><em><strong>Disclaimer</strong>: The views and materials on this website are those of the author and do not necessarily reflect the views of the Bank of Canada or its staff.</em></small></p>
+      <p class="disclaimer"><strong>Disclaimer</strong>: The views and materials on this website are those of the author and do not necessarily reflect the views of the Bank of Canada or its staff.</p>
     </div>
   </main>
 
-  <section class="updates">
-    <div class="container">
-      <h3 style="color: #fff;">Recent/Upcoming talks and updates:</h3>
-      <ul>
-        <li> <a href="https://www.aeaweb.org/conference/" target="_blank" rel="noopener">
-          ASSA 2027 Annual Meeting</a> (Washington DC, 3-5 January 2027) </li>
-        <li> <a href="https://www.bancaditalia.it/media/notizie/2026/Call_for_papers_2026_applied-macroeconomics.pdf?language_id=1" target="_blank" rel="noopener">
-          2nd Conference on Applied Macroeconomics (Bank of Canada, Bank of Italy, BI Norwegian Business School)</a>, Bank of Italy (Rome, 8-9 October 2026)</li>
-        <li><a href="https://cepr.org/system/files/2026-04/LSE-Kiel-CEPR%20Defence%20Conference%202026%20Programme_0.pdf" target="_blank" rel="noopener">LSE–Kiel–CEPR Conference on Defence Economics</a>, London School of Economics (London, 29-30 April 2026)</li>
-        <li> NEWS: new version of "Why Does GDP Move Before Government Spending?" available! (April 2026) </li>
-        <li> NEWS: new version of "Breaking Down the US Employment Multiplier Using Micro-Level Data" available!  (April 2026) </li>
-        <li> <a href="https://safe-frankfurt.de/news-media/events/event-view/3rd-international-conference-on-the-climate-macro-finance-interface-3cmfi.html" target="_blank" rel="noopener">3rd International Conference on the Climate-Macro-Finance Interface</a>, Goethe University (Frankfurt, 23-24 March 2026) </li>
-        <li> Brown Bag Seminar, Catholic University (Milan, 8 January 2026) </li>
-        <li> Brown Bag Seminar, Bicocca University (Milan, 16 December 2025) </li>
-        <li> Brown Bag Seminar, Bocconi University (Milan, 12 December 2025) </li>
-        <li> NEWS: new version of <a href="https://edoardobriganti.github.io/research/procurement_firms_paper.pdf" target="_blank" rel="noopener">Breaking Down the US Employment Multiplier Using Micro-Level Data</a> available! (August 2025)</li>
-        <li><a href="https://www.nber.org/conferences/fiscal-dynamics-state-and-local-governments-fall-2025" target="_blank" rel="noopener">NBER: Fiscal Dynamics of State and Local Government</a> (Cambridge, MA, 11-12 September 2025)</li>
-        <li><a href="https://www.bancaditalia.it/media/agenda/2025-09-04_xxiii-banca-d-italia-public-finance-workshop/" target="_blank" rel="noopener">XXIII Bank of Italy Public Finance Workshop</a> (Rome, 4-5 September 2025)</li>
-        <li><a href="https://sites.google.com/view/iaae2025" target="_blank" rel="noopener">IAAE 2025 Annual Meeting</a> (Turin, 25-27 June 2025)</li>
-        <li> Brown Bag Seminar, Bank of Canada (Ottawa, 20 June 2025)</li>
-        <li>Chaired the <em>Fiscal Policy and the Business Cycle Session</em> at the 2025 <a href="https://www.economics.ca/resources/Documents/pdf/CEA%20Programme%20Archive/CEA2025.pdf" target="_blank" rel="noopener">Annual Meeting of the Canadian Economic Association</a>. Invited speakers: <a href="https://sites.google.com/view/noratraum" target="_blank" rel="noopener">Nora Traum</a> and <a href="https://www.yinxixie.com/" target="_blank" rel="noopener">Yinxi Xie</a>. (Montreal, 29-31 May 2025)</li>
-        <li><a href="https://www.kansascityfed.org/events/2025-midwest-macroeconomics-meeting/" target="_blank" rel="noopener">Midwest Macro</a> (Fed of Kansas City, 16-18 May 2025)</li>
-        <li><a href="https://www.bcb.gov.br/en/about/events/75" target="_blank" rel="noopener">Banco Central do Brasil Annual Conference</a> (Brasilia, 14-16 May 2025)</li>
-      </ul>
-    </div>
+  <section class="container updates">
+    <h2 class="section-title">Talks and updates</h2>
+    <ul>
+      <li> <a href="https://www.aeaweb.org/conference/" target="_blank" rel="noopener">
+        ASSA 2027 Annual Meeting</a> (Washington DC, 3-5 January 2027) </li>
+      <li> <a href="https://www.bancaditalia.it/media/notizie/2026/Call_for_papers_2026_applied-macroeconomics.pdf?language_id=1" target="_blank" rel="noopener">
+        2nd Conference on Applied Macroeconomics (Bank of Canada, Bank of Italy, BI Norwegian Business School)</a>, Bank of Italy (Rome, 8-9 October 2026)</li>
+      <li><a href="https://cepr.org/system/files/2026-04/LSE-Kiel-CEPR%20Defence%20Conference%202026%20Programme_0.pdf" target="_blank" rel="noopener">LSE–Kiel–CEPR Conference on Defence Economics</a>, London School of Economics (London, 29-30 April 2026)</li>
+      <li> NEWS: new version of "Why Does GDP Move Before Government Spending?" available! (April 2026) </li>
+      <li> NEWS: new version of "Breaking Down the US Employment Multiplier Using Micro-Level Data" available!  (April 2026) </li>
+      <li> <a href="https://safe-frankfurt.de/news-media/events/event-view/3rd-international-conference-on-the-climate-macro-finance-interface-3cmfi.html" target="_blank" rel="noopener">3rd International Conference on the Climate-Macro-Finance Interface</a>, Goethe University (Frankfurt, 23-24 March 2026) </li>
+      <li> Brown Bag Seminar, Catholic University (Milan, 8 January 2026) </li>
+      <li> Brown Bag Seminar, Bicocca University (Milan, 16 December 2025) </li>
+      <li> Brown Bag Seminar, Bocconi University (Milan, 12 December 2025) </li>
+      <li> NEWS: new version of <a href="https://edoardobriganti.github.io/research/procurement_firms_paper.pdf" target="_blank" rel="noopener">Breaking Down the US Employment Multiplier Using Micro-Level Data</a> available! (August 2025)</li>
+      <li><a href="https://www.nber.org/conferences/fiscal-dynamics-state-and-local-governments-fall-2025" target="_blank" rel="noopener">NBER: Fiscal Dynamics of State and Local Government</a> (Cambridge, MA, 11-12 September 2025)</li>
+      <li><a href="https://www.bancaditalia.it/media/agenda/2025-09-04_xxiii-banca-d-italia-public-finance-workshop/" target="_blank" rel="noopener">XXIII Bank of Italy Public Finance Workshop</a> (Rome, 4-5 September 2025)</li>
+      <li><a href="https://sites.google.com/view/iaae2025" target="_blank" rel="noopener">IAAE 2025 Annual Meeting</a> (Turin, 25-27 June 2025)</li>
+      <li> Brown Bag Seminar, Bank of Canada (Ottawa, 20 June 2025)</li>
+      <li>Chaired the <em>Fiscal Policy and the Business Cycle Session</em> at the 2025 <a href="https://www.economics.ca/resources/Documents/pdf/CEA%20Programme%20Archive/CEA2025.pdf" target="_blank" rel="noopener">Annual Meeting of the Canadian Economic Association</a>. Invited speakers: <a href="https://sites.google.com/view/noratraum" target="_blank" rel="noopener">Nora Traum</a> and <a href="https://www.yinxixie.com/" target="_blank" rel="noopener">Yinxi Xie</a>. (Montreal, 29-31 May 2025)</li>
+      <li><a href="https://www.kansascityfed.org/events/2025-midwest-macroeconomics-meeting/" target="_blank" rel="noopener">Midwest Macro</a> (Fed of Kansas City, 16-18 May 2025)</li>
+      <li><a href="https://www.bcb.gov.br/en/about/events/75" target="_blank" rel="noopener">Banco Central do Brasil Annual Conference</a> (Brasilia, 14-16 May 2025)</li>
+    </ul>
+    <button id="updates-toggle" class="btn btn-muted" type="button" hidden aria-expanded="false"><span>Show all</span></button>
   </section>
 
-  <footer class="container">
-    <div><strong>Follow me on:</strong></div>
+  <footer class="container site-footer">
     <ul class="social-icons">
       <li>
         <a href="https://twitter.com/EBriganti_bdv" target="_blank" rel="noopener">
-          <i class="fab fa-twitter fa-fw" aria-hidden="true"></i>
-          <span class="sr-only">Twitter</span>
+          <i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i>
+          <span class="sr-only">X (Twitter)</span>
         </a>
       </li>
       <li>
         <a href="https://github.com/EdoardoBriganti" target="_blank" rel="noopener">
-          <i class="fab fa-github fa-fw" aria-hidden="true"></i>
+          <i class="fa-brands fa-github fa-fw" aria-hidden="true"></i>
           <span class="sr-only">GitHub</span>
         </a>
       </li>
       <li>
         <a href="https://www.linkedin.com/in/edoardo-briganti-2b48b2108/" target="_blank" rel="noopener">
-          <i class="fab fa-linkedin fa-fw" aria-hidden="true"></i>
+          <i class="fa-brands fa-linkedin fa-fw" aria-hidden="true"></i>
           <span class="sr-only">LinkedIn</span>
         </a>
       </li>
     </ul>
   </footer>
+
+  <script>
+    (function () {
+      var section = document.querySelector('.updates');
+      var button = document.getElementById('updates-toggle');
+      var total = section.querySelectorAll('li').length;
+      var shown = 6;
+      if (total <= shown) { return; }
+      section.classList.add('collapsible');
+      button.hidden = false;
+      button.querySelector('span').textContent = 'Show all ' + total + ' items';
+      button.addEventListener('click', function () {
+        var expanded = section.classList.toggle('expanded');
+        button.setAttribute('aria-expanded', String(expanded));
+        button.querySelector('span').textContent = expanded ? 'Show fewer' : 'Show all ' + total + ' items';
+      });
+    })();
+  </script>
 </body>
 </html>
-
-
-
-

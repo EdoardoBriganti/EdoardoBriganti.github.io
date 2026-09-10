@@ -1,0 +1,118 @@
+/* Edoardo Briganti — shared site stylesheet (index.html and research/index.html) */
+
+:root {
+  --bg: #0d0d0d;
+  --fg: #e6e6e6;
+  --fg-strong: #ffffff;
+  --muted: #9a9a9a;
+  --rule: #262626;
+  --red: #ff3b3b;
+  --red-soft: rgba(255, 59, 59, 0.14);
+  --red-border: rgba(255, 59, 59, 0.5);
+}
+
+/* Reset & base */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--red); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 2px; }
+:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+strong { color: var(--fg-strong); }
+
+/* Layout */
+.container { max-width: 960px; margin: 0 auto; padding-left: 1.25rem; padding-right: 1.25rem; }
+
+/* Header & nav */
+.site-header {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding-top: 1.1rem; padding-bottom: 1.1rem;
+  border-bottom: 1px solid var(--rule);
+}
+.site-title a { font-size: 1.35rem; font-weight: 700; color: var(--red); letter-spacing: -0.01em; }
+.site-title a:hover { text-decoration: none; }
+nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 1.5rem; }
+nav a { color: #c9c9c9; font-weight: 500; padding: 0.2rem 0; border-bottom: 2px solid transparent; }
+nav a:hover { color: var(--fg-strong); text-decoration: none; }
+nav a[aria-current="page"] { color: var(--fg-strong); border-bottom-color: var(--red); }
+
+/* Section headings: short red bar underneath */
+.section-title { font-size: 1.15rem; font-weight: 600; color: var(--fg-strong); margin-bottom: 1.25rem; }
+.section-title::after { content: ""; display: block; width: 2.25rem; height: 2px; background: var(--red); margin-top: 0.5rem; border-radius: 1px; }
+
+/* Pill buttons (PDF, Slides, Abstract, Show all) */
+.btn {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.22rem 0.75rem;
+  border: 1px solid var(--red-border); border-radius: 999px;
+  background: transparent; color: var(--red);
+  font: inherit; font-size: 0.82rem; font-weight: 500; line-height: 1.4;
+  cursor: pointer; text-decoration: none;
+  transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+}
+.btn:hover, .btn[aria-expanded="true"] { background: var(--red-soft); border-color: var(--red); text-decoration: none; }
+.btn i { font-size: 0.95em; }
+.btn-muted { color: #c9c9c9; border-color: #3a3a3a; }
+.btn-muted:hover { color: var(--fg-strong); border-color: #6a6a6a; background: rgba(255, 255, 255, 0.05); }
+
+/* Home: profile + bio */
+.splash { display: flex; flex-direction: column; align-items: center; gap: 2rem; padding-top: 2.5rem; padding-bottom: 1rem; }
+@media (min-width: 768px) { .splash { flex-direction: row; align-items: flex-start; gap: 3rem; } }
+.profile { display: flex; flex-direction: column; align-items: center; text-align: center; flex-shrink: 0; }
+.profile-pic { width: 220px; height: 220px; border-radius: 50%; overflow: hidden; box-shadow: 0 0 0 1px var(--rule); }
+.profile-pic img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.profile-details { margin-top: 1rem; }
+.profile-details h1 { font-size: 1.25rem; font-weight: 600; color: var(--fg-strong); line-height: 1.3; }
+.profile-details p { font-size: 0.95rem; color: var(--muted); margin-top: 0.15rem; }
+.bio { max-width: 600px; }
+.bio p + p { margin-top: 1.1rem; }
+.bio .disclaimer { color: var(--muted); font-size: 0.85rem; font-style: italic; margin-top: 1.5rem; }
+.bio .disclaimer strong { color: var(--muted); }
+
+/* Home: talks and updates */
+.updates { border-top: 1px solid var(--rule); margin-top: 1.5rem; padding-top: 2rem; padding-bottom: 0.5rem; }
+.updates ul { list-style: none; }
+.updates li { position: relative; padding-left: 1.25rem; margin-bottom: 0.6rem; }
+.updates li::before { content: ""; position: absolute; left: 0; top: 0.72em; width: 6px; height: 6px; border-radius: 50%; background: #4a4a4a; }
+.updates.collapsible:not(.expanded) li:nth-child(n+7) { display: none; }
+#updates-toggle { margin-top: 1rem; }
+
+/* Research: paper list */
+.research { padding-top: 2.5rem; padding-bottom: 1rem; }
+.paper-list { list-style: none; margin-bottom: 2.75rem; }
+.paper-list > .paper { padding: 1.5rem 0; }
+.paper-list > .paper:first-child { padding-top: 0; }
+.paper-list > .paper + .paper { border-top: 1px solid var(--rule); }
+.paper-title { font-size: 1.05rem; font-weight: 600; line-height: 1.45; color: var(--fg-strong); }
+.paper-title .year { color: var(--muted); font-weight: 400; margin-left: 0.35rem; white-space: nowrap; }
+.paper-authors { font-size: 0.95rem; margin-top: 0.25rem; }
+.paper-note { font-size: 0.9rem; color: var(--muted); margin-top: 0.35rem; }
+.paper-links { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-top: 0.8rem; }
+.status { font-size: 0.85rem; color: var(--muted); margin-left: 0.25rem; }
+.abstract { margin-top: 0.9rem; padding-left: 1rem; border-left: 2px solid #333; color: #c9c9c9; font-size: 0.92rem; max-width: 72ch; }
+.abstract[hidden] { display: none; }
+.subpapers { list-style: none; margin-top: 1rem; padding-left: 1.25rem; border-left: 2px solid var(--rule); }
+.subpapers .paper + .paper { margin-top: 1.1rem; }
+.subpapers .paper-title { font-size: 0.98rem; font-weight: 500; }
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--rule); margin-top: 2rem; padding-top: 1.5rem; padding-bottom: 2rem; display: flex; justify-content: center; }
+.social-icons { list-style: none; display: flex; gap: 0.9rem; }
+.social-icons a {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2.4rem; height: 2.4rem; border-radius: 50%;
+  border: 1px solid var(--rule); color: #c9c9c9; font-size: 1.15rem;
+  transition: color 0.15s, border-color 0.15s;
+}
+.social-icons a:hover { color: var(--red); border-color: var(--red-border); text-decoration: none; }
+
+/* Screen-reader only text */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
